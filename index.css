@@ -347,3 +347,10 @@ footer p {
   border-color: #22c55e;
   color: white;
 }
+
+.email-status {
+  min-height: 24px;
+  margin-top: 16px;
+  color: #86efac;
+  font-weight: 600;
+}
