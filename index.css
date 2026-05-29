@@ -342,3 +342,8 @@ footer p {
     text-align: center;
   }
 }
+.contact-links a.copied {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border-color: #22c55e;
+  color: white;
+}

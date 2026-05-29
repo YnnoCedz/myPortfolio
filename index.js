@@ -52,4 +52,26 @@ const observer = new IntersectionObserver(
 cards.forEach(card => {
   observer.observe(card);
 });
+
+// Copy email to clipboard
+const emailLink = document.getElementById("email-link");
+
+if (emailLink) {
+  emailLink.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const email = "mondezynnofranz@gmail.com";
+    const originalText = this.textContent;
+
+    navigator.clipboard.writeText(email).then(() => {
+      this.textContent = "✅ Email Copied!";
+      this.classList.add("copied");
+
+      setTimeout(() => {
+        this.textContent = originalText;
+        this.classList.remove("copied");
+      }, 2000);
+    });
+  });
+}
 ```
